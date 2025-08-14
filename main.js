@@ -21,7 +21,7 @@ taskForm.onsubmit = (e) => {
 
     // Kiểm tra lần nhập sau có bị trùng với lần nhập trước k
     const valid = tasks.find(task => {
-        return task.name === taskInput.value;
+        return task.name.toLowerCase().trim() === taskName.value.toLowerCase().trim();
     });
 
     if (valid) {
